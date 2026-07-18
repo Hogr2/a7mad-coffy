@@ -81,7 +81,7 @@ function ProductPage() {
             <div className="mt-8">
               <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-3">نكهات محسوسة</div>
               <div className="flex flex-wrap gap-2">
-                {p.notes.map((n) => (
+                {p.notes.map((n: string) => (
                   <span key={n} className="px-3 py-1 text-xs border border-brass/40 text-brass rounded-sm">{n}</span>
                 ))}
               </div>
