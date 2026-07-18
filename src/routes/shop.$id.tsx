@@ -12,8 +12,8 @@ export const Route = createFileRoute("/shop/$id")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.name ?? "قهوة"} · متجر الضّوء` },
-      { name: "description", content: loaderData?.story ?? "قهوة مختصة من الضّوء." },
+      { title: `${loaderData?.name ?? "قهوة"} · متجر الضوء` },
+      { name: "description", content: loaderData?.story ?? "قهوة مختصة من الضوء." },
       { property: "og:image", content: loaderData?.image },
     ],
   }),
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/shop/$id")({
   component: ProductPage,
 });
 
-const grinds = ["حبّة كاملة", "إسبريسو", "في ٦٠", "فرنش برس", "تركية"];
+const grinds = ["حبة كاملة", "إسبريسو", "في ٦٠", "فرنش برس", "تركية"];
 
 function ProductPage() {
   const p = Route.useLoaderData();
@@ -130,7 +130,7 @@ function ProductPage() {
               }}
               className="mt-6 w-full rounded-sm bg-brass hover:bg-brass-soft text-primary-foreground py-4 text-sm font-medium transition inline-flex items-center justify-center gap-2"
             >
-              {added ? (<><Check className="w-4 h-4" /> أُضيف إلى السلة</>) : "أضف إلى السلة"}
+              {added ? (<><Check className="w-4 h-4" /> أضيف إلى السلة</>) : "أضف إلى السلة"}
             </button>
             <p className="mt-4 text-[11px] text-muted-foreground text-center font-mono uppercase">
               يخرج من المحمصة خلال ٤٨ ساعة · شحن مجاني فوق ٧٥٬٠٠٠ د.ع
@@ -141,7 +141,7 @@ function ProductPage() {
 
       <section className="mx-auto max-w-7xl px-6 sm:px-10 py-24 border-t border-border/60 mt-24">
         <div className="flex items-end justify-between mb-10">
-          <h2 className="font-display text-3xl sm:text-4xl">قد تعجبك أيضاً</h2>
+          <h2 className="font-display text-3xl sm:text-4xl">قد تعجبك أيضا</h2>
           <Link to="/shop" className="text-sm text-brass hover:underline">كل الحبوب</Link>
         </div>
         <div className="grid grid-cols-3 gap-4 sm:gap-6">

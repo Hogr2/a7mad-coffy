@@ -7,7 +7,7 @@
 @theme inline {
   --font-display: "Reem Kufi", "Amiri", serif;
   --font-body: "Tajawal", "Noto Sans Arabic", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-mono: "JetBrains Mono", "Tajawal", ui-monospace, monospace;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -54,7 +54,7 @@
   --secondary: oklch(0.925 0.015 82);
   --secondary-foreground: oklch(0.24 0.02 55);
   --muted: oklch(0.93 0.012 82);
-  --muted-foreground: oklch(0.45 0.02 60);
+  --muted-foreground: oklch(0.4 0.02 60);
   --accent: oklch(0.55 0.11 72);
   --accent-foreground: oklch(0.97 0.01 85);
   --destructive: oklch(0.5 0.19 25);
@@ -84,6 +84,11 @@
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 500; letter-spacing: 0; }
+}
+
+/* muted labels need extra weight to stay legible on the cream background */
+.text-muted-foreground {
+  font-weight: 500;
 }
 
 @utility hairline {

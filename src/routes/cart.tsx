@@ -7,8 +7,8 @@ import { getProduct } from "@/lib/products";
 export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
-      { title: "السلة · الضّوء" },
-      { name: "description", content: "راجع طلبك وأتمّ الشراء." },
+      { title: "السلة · الضوء" },
+      { name: "description", content: "راجع طلبك وأتم الشراء." },
     ],
   }),
   component: CartPage,
@@ -31,7 +31,7 @@ function CartPage() {
           <Check className="w-6 h-6" />
         </div>
         <h1 className="mt-8 font-display text-4xl">استلمنا طلبك</h1>
-        <p className="mt-4 text-muted-foreground">شكراً {form.name || "لك"}. سيتصل بك أحدنا خلال ساعتين لتأكيد التوصيل. البخار في انتظارك.</p>
+        <p className="mt-4 text-muted-foreground">شكرا {form.name || "لك"}. سيتصل بك أحدنا خلال ساعتين لتأكيد التوصيل. البخار في انتظارك.</p>
         <Link to="/" className="mt-10 inline-flex rounded-sm border border-brass px-6 py-3 text-sm text-brass hover:bg-brass hover:text-primary-foreground transition">
           إلى الصفحة الرئيسية
         </Link>
@@ -42,13 +42,13 @@ function CartPage() {
   return (
     <div className="mx-auto max-w-7xl px-6 sm:px-10 py-16">
       <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 08</div>
-      <h1 className="mt-2 font-display text-5xl sm:text-6xl">السلّة</h1>
+      <h1 className="mt-2 font-display text-5xl sm:text-6xl">السلة</h1>
 
       {rows.length === 0 ? (
         <div className="mt-16 text-center py-20 border border-dashed border-border rounded-sm">
-          <p className="text-muted-foreground">سلّتك فارغة الآن.</p>
+          <p className="text-muted-foreground">سلتك فارغة الآن.</p>
           <Link to="/shop" className="mt-6 inline-flex rounded-sm bg-brass text-primary-foreground px-6 py-3 text-sm hover:bg-brass-soft">
-            تصفّح الحبوب
+            تصفح الحبوب
           </Link>
         </div>
       ) : (
@@ -80,7 +80,7 @@ function CartPage() {
                 </li>
               ))}
             </ul>
-            <button onClick={clear} className="mt-4 text-xs text-muted-foreground hover:text-destructive font-mono uppercase">إفراغ السلّة</button>
+            <button onClick={clear} className="mt-4 text-xs text-muted-foreground hover:text-destructive font-mono uppercase">إفراغ السلة</button>
           </div>
 
           <aside className="lg:col-span-5 lg:sticky lg:top-24 h-fit border border-border rounded-sm p-6 sm:p-8 bg-card grain">

@@ -5,8 +5,8 @@ import pour from "@/assets/pour.jpg";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "المشرب · الضّوء" },
-      { name: "description", content: "قائمة مشروبات القهوة، طرق التحضير اليدوي، والمخبوزات اليومية في مقهى الضّوء ببغداد." },
+      { title: "المشرب · الضوء" },
+      { name: "description", content: "قائمة مشروبات القهوة، طرق التحضير اليدوي، والمخبوزات اليومية في مقهى الضوء ببغداد." },
       { property: "og:image", content: pour },
     ],
   }),
@@ -40,7 +40,7 @@ function MenuPage() {
   return (
     <>
       <header className="relative h-[45vh] min-h-[340px] overflow-hidden grain">
-        <img src={pour} alt="صبّ اللاتيه" className="absolute inset-0 h-full w-full object-cover" width={1280} height={1600} />
+        <img src={pour} alt="صب اللاتيه" className="absolute inset-0 h-full w-full object-cover" width={1280} height={1600} />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/30" />
         <div className="relative h-full mx-auto max-w-7xl px-6 sm:px-10 flex flex-col justify-end pb-12">
           <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 06 · <span className="tracking-normal">المشرب</span></div>

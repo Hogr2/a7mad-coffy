@@ -6,8 +6,8 @@ import cafe from "@/assets/cafe.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "تواصل · الضّوء" },
-      { name: "description", content: "زُرنا في شارع المتنبي ببغداد، أو راسلنا بشأن الجملة، التدريب، أو مناسبات القهوة." },
+      { title: "تواصل · الضوء" },
+      { name: "description", content: "زرنا في شارع المتنبي ببغداد، أو راسلنا بشأن الجملة، التدريب، أو مناسبات القهوة." },
       { property: "og:image", content: cafe },
     ],
   }),
@@ -21,12 +21,12 @@ function ContactPage() {
   return (
     <>
       <header className="relative h-[45vh] min-h-[320px] overflow-hidden grain">
-        <img src={cafe} alt="داخل مقهى الضّوء" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1200} />
+        <img src={cafe} alt="داخل مقهى الضوء" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1200} />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
         <div className="relative h-full mx-auto max-w-7xl px-6 sm:px-10 flex flex-col justify-end pb-12">
           <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 09 · <span className="tracking-normal">تواصل</span></div>
-          <h1 className="mt-3 font-display text-5xl sm:text-7xl">قل مرحباً</h1>
-          <p className="mt-4 max-w-lg text-muted-foreground">للحجز، الجملة، التدريب، أو مجرد فنجانٍ ودردشة. نحن هنا.</p>
+          <h1 className="mt-3 font-display text-5xl sm:text-7xl">قل مرحبا</h1>
+          <p className="mt-4 max-w-lg text-muted-foreground">للحجز، الجملة، التدريب، أو مجرد فنجان ودردشة. نحن هنا.</p>
         </div>
       </header>
 

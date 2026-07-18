@@ -21,7 +21,7 @@ function NotFoundComponent() {
       <div className="max-w-md text-center">
         <h1 className="font-display text-7xl text-brass">٤٠٤</h1>
         <h2 className="mt-4 font-display text-xl">الصفحة غير موجودة</h2>
-        <p className="mt-2 text-sm text-muted-foreground">الرابط الذي بحثت عنه لم نجده. عُد إلى البداية.</p>
+        <p className="mt-2 text-sm text-muted-foreground">الرابط الذي بحثت عنه لم نجده. عد إلى البداية.</p>
         <div className="mt-6">
           <Link to="/" className="inline-flex items-center justify-center rounded-sm border border-brass px-5 py-2 text-sm text-brass hover:bg-brass hover:text-primary-foreground transition-colors">
             العودة للرئيسية
@@ -42,14 +42,14 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-display text-xl">تعذّر تحميل هذه الصفحة</h1>
-        <p className="mt-2 text-sm text-muted-foreground">حدث خطأ ما. حاول مجدداً أو عُد للرئيسية.</p>
+        <h1 className="font-display text-xl">تعذر تحميل هذه الصفحة</h1>
+        <p className="mt-2 text-sm text-muted-foreground">حدث خطأ ما. حاول مجددا أو عد للرئيسية.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => { router.invalidate(); reset(); }}
             className="rounded-sm border border-brass px-5 py-2 text-sm text-brass hover:bg-brass hover:text-primary-foreground"
           >
-            حاول مجدداً
+            حاول مجددا
           </button>
           <a href="/" className="rounded-sm border border-border px-5 py-2 text-sm hover:bg-secondary">الرئيسية</a>
         </div>
@@ -63,10 +63,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "الضّوء · محمصة قهوة مختصة" },
-      { name: "description", content: "الضّوء — محمصة ومقهى قهوة مختصة في بغداد. حبوب أخضر تُحمّص ببطء، ومشروبات تُقدّم ببخارٍ صادق." },
+      { title: "الضوء · محمصة قهوة مختصة" },
+      { name: "description", content: "الضوء — محمصة ومقهى قهوة مختصة في بغداد. حبوب أخضر تحمص ببطء، ومشروبات تقدم ببخار صادق." },
       { name: "author", content: "Al-Daw Specialty Coffee" },
-      { property: "og:title", content: "الضّوء · Light & Steam Specialty Coffee" },
+      { property: "og:title", content: "الضوء · Light & Steam Specialty Coffee" },
       { property: "og:description", content: "محمصة قهوة مختصة في بغداد. من المزرعة إلى فنجانك، بلا اختصار." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

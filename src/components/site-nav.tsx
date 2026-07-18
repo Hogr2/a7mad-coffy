@@ -19,7 +19,7 @@ export function SiteNav() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <span className="w-8 h-8 rounded-full border border-brass/60 flex items-center justify-center text-brass font-display text-sm animate-flicker">ض</span>
-          <span className="font-display text-lg tracking-wide">الضّوء</span>
+          <span className="font-display text-lg">الضوء</span>
           <span className="hidden sm:inline text-[10px] font-mono uppercase text-muted-foreground tracking-[0.2em] ms-1">Light & Steam</span>
         </Link>
 

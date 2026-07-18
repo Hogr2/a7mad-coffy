@@ -6,8 +6,8 @@ import bag from "@/assets/bag.jpg";
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
-      { title: "المتجر · الضّوء" },
-      { name: "description", content: "حبوب قهوة مختصة من إثيوبيا وكولومبيا وبنما، محمّصة يدوياً في بغداد. طلبك يخرج طازجاً خلال ٤٨ ساعة." },
+      { title: "المتجر · الضوء" },
+      { name: "description", content: "حبوب قهوة مختصة من إثيوبيا وكولومبيا وبنما، محمصة يدويا في بغداد. طلبك يخرج طازجا خلال ٤٨ ساعة." },
       { property: "og:image", content: bag },
     ],
   }),
@@ -24,10 +24,10 @@ function ShopPage() {
     <div className="mx-auto max-w-7xl px-6 sm:px-10 py-16 sm:py-24">
       <header className="mb-14">
         <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 07 · <span className="tracking-normal">المتجر</span></div>
-        <h1 className="mt-3 font-display text-5xl sm:text-7xl">حبوبٌ للبيت</h1>
+        <h1 className="mt-3 font-display text-5xl sm:text-7xl">حبوب للبيت</h1>
         <p className="mt-6 max-w-xl text-muted-foreground leading-relaxed">
-          كل كيسٍ يخرج من المحمصة خلال ٤٨ ساعة من طلبك. اطحن قبل التحضير مباشرة،
-          واحفظ الكيس بعيداً عن الشمس.
+          كل كيس يخرج من المحمصة خلال ٤٨ ساعة من طلبك. اطحن قبل التحضير مباشرة،
+          واحفظ الكيس بعيدا عن الشمس.
         </p>
       </header>
 

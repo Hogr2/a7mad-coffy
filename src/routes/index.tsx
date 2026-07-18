@@ -11,7 +11,7 @@ import { products } from "@/lib/products";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "الضّوء · محمصة قهوة مختصة في بغداد" },
+      { title: "الضوء · محمصة قهوة مختصة في بغداد" },
       { name: "description", content: "من مرتفعات إثيوبيا وكولومبيا إلى محمصتنا في بغداد. حبوب مختصة، تحميص يدوي، وفنجان بلا اختصار." },
       { property: "og:image", content: heroSteam },
     ],
@@ -42,19 +42,19 @@ function Home() {
               <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 01 · <span className="tracking-normal">فصل الضوء</span></span>
             </div>
             <h1 className="font-display text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-foreground">
-              نُحمّصها ببطء،<br />
-              <span className="text-brass">ونُقدّمها ببخارٍ</span> صادق.
+              نحمصها ببطء،<br />
+              <span className="text-brass">ونقدمها ببخار</span> صادق.
             </h1>
             <p className="mt-8 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
-              محمصة قهوة مختصة في قلب بغداد. حبوبٌ مُنتقاة من مزارع صغيرة،
-              تُحمّص كل صباح على دفعاتٍ لا تتجاوز عشرة كيلوغرامات.
+              محمصة قهوة مختصة في قلب بغداد. حبوب منتقاة من مزارع صغيرة،
+              تحمص كل صباح على دفعات لا تتجاوز عشرة كيلوغرامات.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 to="/shop"
                 className="group inline-flex items-center gap-3 rounded-sm bg-brass px-7 py-3.5 text-sm font-medium text-primary-foreground hover:bg-brass-soft transition-colors"
               >
-                تصفّح الحبوب
+                تصفح الحبوب
                 <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -72,7 +72,7 @@ function Home() {
       {/* MARQUEE — origins */}
       <section className="border-y border-border/60 bg-secondary/30 overflow-hidden">
         <div className="py-5 flex items-center gap-16 whitespace-nowrap text-sm text-muted-foreground animate-[flicker_6s_ease-in-out_infinite]">
-          {["إثيوبيا · يرغاتشيف", "كولومبيا · هويلا", "بنما · بوكيتِه", "كينيا · نيري", "رواندا · موراغا", "بيرو · كاخاماركا"].concat(["إثيوبيا · يرغاتشيف", "كولومبيا · هويلا", "بنما · بوكيتِه"]).map((s, i) => (
+          {["إثيوبيا · يرغاتشيف", "كولومبيا · هويلا", "بنما · بوكيته", "كينيا · نيري", "رواندا · موراغا", "بيرو · كاخاماركا"].concat(["إثيوبيا · يرغاتشيف", "كولومبيا · هويلا", "بنما · بوكيته"]).map((s, i) => (
             <span key={i} className="flex items-center gap-16">
               <span className="text-brass">◇</span> {s}
             </span>
@@ -89,15 +89,15 @@ function Home() {
           </div>
           <p className="md:col-span-6 md:col-start-7 text-muted-foreground leading-relaxed">
             أربع لحظات نلتقطها كل يوم في المحمصة. ندعك تراها من قريب،
-            لأن القهوة الجيّدة لا تخفي عملياتها.
+            لأن القهوة الجيدة لا تخفي عملياتها.
           </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
           {[
-            { img: cherry, num: "٠١", title: "الحصاد", cap: "قِطاف يدوي في الموسم" },
-            { img: beans, num: "٠٢", title: "الفرز", cap: "حبّة حبّة، ضوء طبيعي" },
-            { img: pour, num: "٠٣", title: "التحميص", cap: "دفعة صغيرة، تحكّم دقيق" },
+            { img: cherry, num: "٠١", title: "الحصاد", cap: "قطاف يدوي في الموسم" },
+            { img: beans, num: "٠٢", title: "الفرز", cap: "حبة حبة، ضوء طبيعي" },
+            { img: pour, num: "٠٣", title: "التحميص", cap: "دفعة صغيرة، تحكم دقيق" },
             { img: cafe, num: "٠٤", title: "التقديم", cap: "على بار المحمصة" },
           ].map((f) => (
             <figure key={f.num} className="relative aspect-[3/4] overflow-hidden rounded-sm group grain">
@@ -117,18 +117,18 @@ function Home() {
       <section className="relative bg-secondary/30 border-y border-border/60 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 py-24 grid md:grid-cols-12 gap-10 items-center">
           <div className="md:col-span-7 relative aspect-[4/5] md:aspect-[5/6] overflow-hidden">
-            <img src={bag} alt="حقيبة قهوة الضّوء" loading="lazy" className="h-full w-full object-cover" />
+            <img src={bag} alt="حقيبة قهوة الضوء" loading="lazy" className="h-full w-full object-cover" />
             <div className="absolute inset-0 vignette" />
             <div className="absolute top-6 start-6 font-mono text-[10px] uppercase tracking-[0.3em] text-brass-bright">Reel 03 · Featured</div>
           </div>
           <div className="md:col-span-5">
-            <div className="font-mono text-[11px] text-brass mb-4">حبّة الشهر</div>
-            <h2 className="font-display text-5xl sm:text-6xl leading-none">سِدرة</h2>
+            <div className="font-mono text-[11px] text-brass mb-4">حبة الشهر</div>
+            <h2 className="font-display text-5xl sm:text-6xl leading-none">سدرة</h2>
             <div className="mt-3 text-muted-foreground">كولومبيا · هويلا · تخمير لاهوائي</div>
             <div className="hairline my-8" />
             <p className="text-foreground/80 leading-relaxed">
-              دفعة محدودة من مزرعة إل بارايسو. أربعة أيامٍ من التخمير اللاهوائي
-              أعطتها فراولة ناضجة وكاكاو دافئ. نُحمّصها متوسطةً لتبقى الحلاوة على السطح.
+              دفعة محدودة من مزرعة إل بارايسو. أربعة أيام من التخمير اللاهوائي
+              أعطتها فراولة ناضجة وكاكاو دافئ. نحمصها متوسطة لتبقى الحلاوة على السطح.
             </p>
             <ul className="mt-8 grid grid-cols-3 gap-4 text-center">
               {[["ياسمين", "علوي"], ["فراولة", "أوسط"], ["كاكاو", "نهاية"]].map(([n, r]) => (
@@ -161,7 +161,7 @@ function Home() {
         <div className="flex items-end justify-between mb-12">
           <div>
             <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass mb-2">Reel 04 · <span className="tracking-normal">المتجر</span></div>
-            <h2 className="font-display text-4xl sm:text-5xl">حبوبٌ للبيت.</h2>
+            <h2 className="font-display text-4xl sm:text-5xl">حبوب للبيت.</h2>
           </div>
           <Link to="/shop" className="hidden sm:inline-flex items-center gap-2 text-sm text-brass hover:gap-3 transition-all">
             كل الحبوب <ArrowLeft className="w-4 h-4" />
@@ -196,12 +196,12 @@ function Home() {
 
       {/* VISIT — atmospheric interior */}
       <section className="relative overflow-hidden">
-        <img src={cafe} alt="داخل مقهى الضّوء" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={cafe} alt="داخل مقهى الضوء" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-background/70" />
         <div className="absolute inset-0 vignette" />
         <div className="relative mx-auto max-w-7xl px-6 sm:px-10 py-32 sm:py-40 text-center">
           <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 05 · Visit</div>
-          <h2 className="mt-4 font-display text-5xl sm:text-6xl">تعالَ عند الغروب.</h2>
+          <h2 className="mt-4 font-display text-5xl sm:text-6xl">تعال عند الغروب.</h2>
           <p className="mt-6 max-w-xl mx-auto text-muted-foreground leading-relaxed">
             المصابيح النحاسية تبدأ بالإضاءة عند الخامسة والنصف. البخار يرتفع.
             الحديث يهدأ. هذه أفضل ساعة عندنا.
@@ -214,7 +214,7 @@ function Home() {
             <span className="hidden sm:inline text-brass">◇</span>
             <div>
               <div className="font-mono text-[10px] uppercase text-brass">الدوام</div>
-              <div className="mt-1">يومياً ٧ص – ١١م</div>
+              <div className="mt-1">يوميا ٧ص – ١١م</div>
             </div>
           </div>
           <Link to="/contact" className="inline-flex mt-10 items-center gap-2 rounded-sm border border-brass px-7 py-3 text-sm text-brass hover:bg-brass hover:text-primary-foreground transition">
