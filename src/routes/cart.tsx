@@ -80,7 +80,7 @@ function CartPage() {
                 </li>
               ))}
             </ul>
-            <button onClick={clear} className="mt-4 text-xs text-muted-foreground hover:text-destructive font-mono uppercase tracking-widest">إفراغ السلّة</button>
+            <button onClick={clear} className="mt-4 text-xs text-muted-foreground hover:text-destructive font-mono uppercase">إفراغ السلّة</button>
           </div>
 
           <aside className="lg:col-span-5 lg:sticky lg:top-24 h-fit border border-border rounded-sm p-6 sm:p-8 bg-card grain">
@@ -123,7 +123,7 @@ function CartPage() {
 function Field({ label, value, onChange, required, dir }: { label: string; value: string; onChange: (v: string) => void; required?: boolean; dir?: "ltr" | "rtl" }) {
   return (
     <label className="block">
-      <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{label}</span>
+      <span className="font-mono text-[10px] uppercase text-muted-foreground">{label}</span>
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}

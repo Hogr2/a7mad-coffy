@@ -24,7 +24,7 @@ function ContactPage() {
         <img src={cafe} alt="داخل مقهى الضّوء" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1200} />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
         <div className="relative h-full mx-auto max-w-7xl px-6 sm:px-10 flex flex-col justify-end pb-12">
-          <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 09 · تواصل</div>
+          <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 09 · <span className="tracking-normal">تواصل</span></div>
           <h1 className="mt-3 font-display text-5xl sm:text-7xl">قل مرحباً</h1>
           <p className="mt-4 max-w-lg text-muted-foreground">للحجز، الجملة، التدريب، أو مجرد فنجانٍ ودردشة. نحن هنا.</p>
         </div>
@@ -38,7 +38,7 @@ function ContactPage() {
           <Block icon={<Instagram className="w-4 h-4" />} label="إنستغرام" lines={["@aldawcoffee"]} dir="ltr" />
 
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-widest text-brass mb-3">الدوام</div>
+            <div className="font-mono text-[10px] uppercase text-brass mb-3">الدوام</div>
             <ul className="text-sm space-y-1.5">
               <li className="flex justify-between border-b border-border/60 pb-1.5"><span>السبت – الخميس</span><span className="font-mono">٧ص – ١١م</span></li>
               <li className="flex justify-between"><span>الجمعة</span><span className="font-mono">٢ظ – ١٢م</span></li>
@@ -66,7 +66,7 @@ function ContactPage() {
               </div>
 
               <div>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">الموضوع</span>
+                <span className="font-mono text-[10px] uppercase text-muted-foreground">الموضوع</span>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {["زيارة", "طلب جملة", "تدريب", "مناسبة"].map((s) => (
                     <button
@@ -84,7 +84,7 @@ function ContactPage() {
               </div>
 
               <label className="block">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">الرسالة</span>
+                <span className="font-mono text-[10px] uppercase text-muted-foreground">الرسالة</span>
                 <textarea
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -110,7 +110,7 @@ function Block({ icon, label, lines, dir }: { icon: React.ReactNode; label: stri
     <div>
       <div className="flex items-center gap-2 text-brass mb-2">
         {icon}
-        <span className="font-mono text-[10px] uppercase tracking-widest">{label}</span>
+        <span className="font-mono text-[10px] uppercase">{label}</span>
       </div>
       <div dir={dir} className="font-display text-2xl leading-snug">
         {lines.map((l, i) => <div key={i}>{l}</div>)}
@@ -122,7 +122,7 @@ function Block({ icon, label, lines, dir }: { icon: React.ReactNode; label: stri
 function Field({ label, value, onChange, required, dir, type = "text" }: { label: string; value: string; onChange: (v: string) => void; required?: boolean; dir?: "ltr" | "rtl"; type?: string }) {
   return (
     <label className="block">
-      <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{label}</span>
+      <span className="font-mono text-[10px] uppercase text-muted-foreground">{label}</span>
       <input
         type={type}
         value={value}

@@ -17,7 +17,7 @@ function Section({ title, num, items }: { title: string; num: string; items: { n
   return (
     <section className="py-14 border-b border-border/60 last:border-0">
       <div className="flex items-baseline gap-4 mb-10">
-        <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">{num}</span>
+        <span className="font-mono text-[11px] text-brass">{num}</span>
         <h2 className="font-display text-4xl sm:text-5xl">{title}</h2>
       </div>
       <ul className="grid sm:grid-cols-2 gap-x-14 gap-y-6">
@@ -43,7 +43,7 @@ function MenuPage() {
         <img src={pour} alt="صبّ اللاتيه" className="absolute inset-0 h-full w-full object-cover" width={1280} height={1600} />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/30" />
         <div className="relative h-full mx-auto max-w-7xl px-6 sm:px-10 flex flex-col justify-end pb-12">
-          <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 06 · المشرب</div>
+          <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 06 · <span className="tracking-normal">المشرب</span></div>
           <h1 className="mt-3 font-display text-5xl sm:text-7xl">القائمة</h1>
           <p className="mt-4 max-w-lg text-muted-foreground">مشروبات إسبريسو، تحضيرات يدوية، ومخبوزات نصنعها كل صباح. الأسعار بالدينار العراقي.</p>
         </div>

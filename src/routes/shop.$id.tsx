@@ -58,7 +58,7 @@ function ProductPage() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">{p.origin}</div>
+            <div className="font-mono text-[11px] text-brass">{p.origin}</div>
             <h1 className="mt-3 font-display text-5xl sm:text-6xl leading-none">{p.name}</h1>
             <div className="hairline my-8" />
 
@@ -72,14 +72,14 @@ function ProductPage() {
                 ["الوزن", p.weight],
               ].map(([k, v]) => (
                 <div key={k} className="border-b border-border/60 pb-3">
-                  <dt className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{k}</dt>
+                  <dt className="font-mono text-[10px] uppercase text-muted-foreground">{k}</dt>
                   <dd className="font-display text-lg mt-1">{v}</dd>
                 </div>
               ))}
             </dl>
 
             <div className="mt-8">
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-3">نكهات محسوسة</div>
+              <div className="font-mono text-[10px] uppercase text-muted-foreground mb-3">نكهات محسوسة</div>
               <div className="flex flex-wrap gap-2">
                 {p.notes.map((n: string) => (
                   <span key={n} className="px-3 py-1 text-xs border border-brass/40 text-brass rounded-sm">{n}</span>
@@ -88,7 +88,7 @@ function ProductPage() {
             </div>
 
             <div className="mt-10">
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-3">الطحن</div>
+              <div className="font-mono text-[10px] uppercase text-muted-foreground mb-3">الطحن</div>
               <div className="flex flex-wrap gap-2">
                 {grinds.map((g) => (
                   <button
@@ -109,7 +109,7 @@ function ProductPage() {
             <div className="flex items-end justify-between gap-6">
               <div>
                 <div className="font-display text-4xl text-brass">{(p.price * 1000 * qty).toLocaleString("ar-EG")}</div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">دينار عراقي</div>
+                <div className="font-mono text-[10px] uppercase text-muted-foreground mt-1">دينار عراقي</div>
               </div>
               <div className="flex items-center border border-border rounded-sm">
                 <button onClick={() => setQty(Math.max(1, qty - 1))} className="w-10 h-10 flex items-center justify-center hover:bg-secondary" aria-label="أنقص">
@@ -132,7 +132,7 @@ function ProductPage() {
             >
               {added ? (<><Check className="w-4 h-4" /> أُضيف إلى السلة</>) : "أضف إلى السلة"}
             </button>
-            <p className="mt-4 text-[11px] text-muted-foreground text-center font-mono uppercase tracking-widest">
+            <p className="mt-4 text-[11px] text-muted-foreground text-center font-mono uppercase">
               يخرج من المحمصة خلال ٤٨ ساعة · شحن مجاني فوق ٧٥٬٠٠٠ د.ع
             </p>
           </div>

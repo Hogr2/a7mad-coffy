@@ -39,7 +39,7 @@ function Home() {
           <div className="max-w-2xl animate-reel-in">
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-12 bg-brass" />
-              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 01 · فصل الضوء</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 01 · <span className="tracking-normal">فصل الضوء</span></span>
             </div>
             <h1 className="font-display text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-foreground">
               نُحمّصها ببطء،<br />
@@ -71,7 +71,7 @@ function Home() {
 
       {/* MARQUEE — origins */}
       <section className="border-y border-border/60 bg-secondary/30 overflow-hidden">
-        <div className="py-5 flex items-center gap-16 whitespace-nowrap font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground animate-[flicker_6s_ease-in-out_infinite]">
+        <div className="py-5 flex items-center gap-16 whitespace-nowrap text-sm text-muted-foreground animate-[flicker_6s_ease-in-out_infinite]">
           {["إثيوبيا · يرغاتشيف", "كولومبيا · هويلا", "بنما · بوكيتِه", "كينيا · نيري", "رواندا · موراغا", "بيرو · كاخاماركا"].concat(["إثيوبيا · يرغاتشيف", "كولومبيا · هويلا", "بنما · بوكيتِه"]).map((s, i) => (
             <span key={i} className="flex items-center gap-16">
               <span className="text-brass">◇</span> {s}
@@ -122,7 +122,7 @@ function Home() {
             <div className="absolute top-6 start-6 font-mono text-[10px] uppercase tracking-[0.3em] text-brass-bright">Reel 03 · Featured</div>
           </div>
           <div className="md:col-span-5">
-            <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass mb-4">حبّة الشهر</div>
+            <div className="font-mono text-[11px] text-brass mb-4">حبّة الشهر</div>
             <h2 className="font-display text-5xl sm:text-6xl leading-none">سِدرة</h2>
             <div className="mt-3 text-muted-foreground">كولومبيا · هويلا · تخمير لاهوائي</div>
             <div className="hairline my-8" />
@@ -134,14 +134,14 @@ function Home() {
               {[["ياسمين", "علوي"], ["فراولة", "أوسط"], ["كاكاو", "نهاية"]].map(([n, r]) => (
                 <li key={n} className="border border-border rounded-sm p-3">
                   <div className="font-display text-lg">{n}</div>
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">{r}</div>
+                  <div className="font-mono text-[10px] uppercase text-muted-foreground mt-1">{r}</div>
                 </li>
               ))}
             </ul>
             <div className="mt-10 flex items-center gap-6">
               <div>
                 <div className="font-display text-3xl text-brass">٢٦٬٠٠٠ <span className="text-sm text-muted-foreground">د.ع</span></div>
-                <div className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">٢٥٠ غرام</div>
+                <div className="font-mono text-[10px] text-muted-foreground uppercase">٢٥٠ غرام</div>
               </div>
               <Link
                 to="/shop/$id"
@@ -160,7 +160,7 @@ function Home() {
       <section className="mx-auto max-w-7xl px-6 sm:px-10 py-24">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass mb-2">Reel 04 · المتجر</div>
+            <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass mb-2">Reel 04 · <span className="tracking-normal">المتجر</span></div>
             <h2 className="font-display text-4xl sm:text-5xl">حبوبٌ للبيت.</h2>
           </div>
           <Link to="/shop" className="hidden sm:inline-flex items-center gap-2 text-sm text-brass hover:gap-3 transition-all">
@@ -177,7 +177,7 @@ function Home() {
             >
               <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary grain">
                 <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute top-4 start-4 font-mono text-[10px] uppercase tracking-widest text-brass-bright">{p.roast}</div>
+                <div className="absolute top-4 start-4 font-mono text-[10px] uppercase text-brass-bright">{p.roast}</div>
               </div>
               <div className="pt-5 flex items-start justify-between gap-3">
                 <div>
@@ -208,12 +208,12 @@ function Home() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-brass">العنوان</div>
+              <div className="font-mono text-[10px] uppercase text-brass">العنوان</div>
               <div className="mt-1">شارع المتنبي، بغداد</div>
             </div>
             <span className="hidden sm:inline text-brass">◇</span>
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-brass">الدوام</div>
+              <div className="font-mono text-[10px] uppercase text-brass">الدوام</div>
               <div className="mt-1">يومياً ٧ص – ١١م</div>
             </div>
           </div>

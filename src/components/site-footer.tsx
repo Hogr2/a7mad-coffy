@@ -19,7 +19,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-brass mb-4">التنقّل</div>
+          <div className="font-mono text-[10px] text-brass mb-4">التنقّل</div>
           <ul className="space-y-2 text-sm">
             <li><Link to="/" className="hover:text-brass">الرئيسية</Link></li>
             <li><Link to="/menu" className="hover:text-brass">المشرب</Link></li>
@@ -29,7 +29,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-brass mb-4">زُرنا</div>
+          <div className="font-mono text-[10px] text-brass mb-4">زُرنا</div>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><MapPin className="w-3.5 h-3.5 mt-1 text-brass shrink-0" /> شارع المتنبي، بغداد</li>
             <li className="flex items-start gap-2"><Phone className="w-3.5 h-3.5 mt-1 text-brass shrink-0" /><span dir="ltr">+964 770 000 0000</span></li>
@@ -39,7 +39,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] font-mono text-muted-foreground uppercase tracking-[0.2em]">
-          <span>© ٢٠٢٥ الضّوء</span>
+          <span className="tracking-normal">© ٢٠٢٥ الضّوء</span>
           <span>Roasted slowly · Served with steam</span>
         </div>
       </div>
