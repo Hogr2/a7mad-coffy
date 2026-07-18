@@ -25,7 +25,7 @@ function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
         <div className="relative h-full mx-auto max-w-7xl px-6 sm:px-10 flex flex-col justify-end pb-12">
           <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 09 · تواصل</div>
-          <h1 className="mt-3 font-display text-6xl sm:text-7xl">قل مرحباً</h1>
+          <h1 className="mt-3 font-display text-5xl sm:text-7xl">قل مرحباً</h1>
           <p className="mt-4 max-w-lg text-muted-foreground">للحجز، الجملة، التدريب، أو مجرد فنجانٍ ودردشة. نحن هنا.</p>
         </div>
       </header>

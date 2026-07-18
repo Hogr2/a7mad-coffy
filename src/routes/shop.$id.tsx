@@ -52,14 +52,14 @@ function ProductPage() {
           <div className="lg:col-span-7 relative aspect-square lg:aspect-[5/6] overflow-hidden grain bg-secondary">
             <img src={p.image} alt={p.name} className="h-full w-full object-cover" />
             <div className="absolute inset-0 vignette" />
-            <div className="absolute top-6 start-6 font-mono text-[10px] uppercase tracking-[0.3em] text-brass">
+            <div className="absolute top-6 start-6 font-mono text-[10px] uppercase tracking-[0.3em] text-brass-bright">
               LOT #{String(products.indexOf(p) + 1).padStart(3, "0")}
             </div>
           </div>
 
           <div className="lg:col-span-5">
             <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">{p.origin}</div>
-            <h1 className="mt-3 font-display text-6xl leading-none">{p.name}</h1>
+            <h1 className="mt-3 font-display text-5xl sm:text-6xl leading-none">{p.name}</h1>
             <div className="hairline my-8" />
 
             <p className="text-foreground/80 leading-relaxed">{p.story}</p>
@@ -147,9 +147,8 @@ function ProductPage() {
         <div className="grid grid-cols-3 gap-4 sm:gap-6">
           {others.map((o) => (
             <Link to="/shop/$id" params={{ id: o.id }} key={o.id} className="group block">
-              <div className="relative aspect-square overflow-hidden bg-secondary">
+              <div className="relative aspect-square overflow-hidden rounded-sm bg-secondary">
                 <img src={o.image} alt={o.name} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
               <div className="pt-3">
                 <div className="font-display text-lg sm:text-xl group-hover:text-brass transition-colors">{o.name}</div>

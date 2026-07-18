@@ -70,9 +70,9 @@ function CartPage() {
                     </div>
                     <div className="mt-auto flex items-center justify-between pt-4">
                       <div className="flex items-center border border-border rounded-sm">
-                        <button onClick={() => setQty(item.id, item.qty - 1)} className="w-8 h-8 flex items-center justify-center hover:bg-secondary"><Minus className="w-3 h-3" /></button>
+                        <button onClick={() => setQty(item.id, item.qty - 1)} aria-label="أنقص" className="w-10 h-10 flex items-center justify-center hover:bg-secondary"><Minus className="w-3 h-3" /></button>
                         <span className="w-8 text-center font-mono text-sm">{item.qty}</span>
-                        <button onClick={() => setQty(item.id, item.qty + 1)} className="w-8 h-8 flex items-center justify-center hover:bg-secondary"><Plus className="w-3 h-3" /></button>
+                        <button onClick={() => setQty(item.id, item.qty + 1)} aria-label="زد" className="w-10 h-10 flex items-center justify-center hover:bg-secondary"><Plus className="w-3 h-3" /></button>
                       </div>
                       <div className="font-mono text-brass">{(product.price * 1000 * item.qty).toLocaleString("ar-EG")} <span className="text-[10px] text-muted-foreground">د.ع</span></div>
                     </div>

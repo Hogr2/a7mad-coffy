@@ -67,12 +67,6 @@ function Home() {
           </div>
         </div>
 
-        {/* filmstrip perforations */}
-        <div className="absolute bottom-0 inset-x-0 h-4 flex gap-2 px-4 opacity-40">
-          {Array.from({ length: 60 }).map((_, i) => (
-            <span key={i} className="h-full w-2 bg-background rounded-sm" />
-          ))}
-        </div>
       </section>
 
       {/* MARQUEE — origins */}
@@ -106,21 +100,14 @@ function Home() {
             { img: pour, num: "٠٣", title: "التحميص", cap: "دفعة صغيرة، تحكّم دقيق" },
             { img: cafe, num: "٠٤", title: "التقديم", cap: "على بار المحمصة" },
           ].map((f) => (
-            <figure key={f.num} className="relative aspect-[3/4] overflow-hidden group grain">
+            <figure key={f.num} className="relative aspect-[3/4] overflow-hidden rounded-sm group grain">
               <img src={f.img} alt={f.title} loading="lazy" className="h-full w-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
               <figcaption className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <div className="font-mono text-[10px] text-brass tracking-[0.25em]">FRAME {f.num}</div>
-                <div className="font-display text-xl sm:text-2xl mt-1">{f.title}</div>
-                <div className="text-[11px] text-muted-foreground mt-1">{f.cap}</div>
+                <div className="font-mono text-[10px] text-brass-bright tracking-[0.25em]">FRAME {f.num}</div>
+                <div className="font-display text-xl sm:text-2xl mt-1 text-cream">{f.title}</div>
+                <div className="text-[11px] text-cream/70 mt-1">{f.cap}</div>
               </figcaption>
-              {/* film perforations */}
-              <div className="absolute top-0 inset-x-0 h-2 flex gap-1 px-1">
-                {Array.from({ length: 12 }).map((_, i) => <span key={i} className="h-full flex-1 bg-background/60 rounded-sm" />)}
-              </div>
-              <div className="absolute bottom-0 inset-x-0 h-2 flex gap-1 px-1">
-                {Array.from({ length: 12 }).map((_, i) => <span key={i} className="h-full flex-1 bg-background/60 rounded-sm" />)}
-              </div>
             </figure>
           ))}
         </div>
@@ -132,7 +119,7 @@ function Home() {
           <div className="md:col-span-7 relative aspect-[4/5] md:aspect-[5/6] overflow-hidden">
             <img src={bag} alt="حقيبة قهوة الضّوء" loading="lazy" className="h-full w-full object-cover" />
             <div className="absolute inset-0 vignette" />
-            <div className="absolute top-6 start-6 font-mono text-[10px] uppercase tracking-[0.3em] text-brass">Reel 03 · Featured</div>
+            <div className="absolute top-6 start-6 font-mono text-[10px] uppercase tracking-[0.3em] text-brass-bright">Reel 03 · Featured</div>
           </div>
           <div className="md:col-span-5">
             <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass mb-4">حبّة الشهر</div>
@@ -188,10 +175,9 @@ function Home() {
               params={{ id: p.id }}
               className="group block"
             >
-              <div className="relative aspect-[4/5] overflow-hidden bg-secondary grain">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary grain">
                 <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
-                <div className="absolute top-4 start-4 font-mono text-[10px] uppercase tracking-widest text-brass">{p.roast}</div>
+                <div className="absolute top-4 start-4 font-mono text-[10px] uppercase tracking-widest text-brass-bright">{p.roast}</div>
               </div>
               <div className="pt-5 flex items-start justify-between gap-3">
                 <div>

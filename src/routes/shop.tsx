@@ -24,7 +24,7 @@ function ShopPage() {
     <div className="mx-auto max-w-7xl px-6 sm:px-10 py-16 sm:py-24">
       <header className="mb-14">
         <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-brass">Reel 07 · المتجر</div>
-        <h1 className="mt-3 font-display text-6xl sm:text-7xl">حبوبٌ للبيت</h1>
+        <h1 className="mt-3 font-display text-5xl sm:text-7xl">حبوبٌ للبيت</h1>
         <p className="mt-6 max-w-xl text-muted-foreground leading-relaxed">
           كل كيسٍ يخرج من المحمصة خلال ٤٨ ساعة من طلبك. اطحن قبل التحضير مباشرة،
           واحفظ الكيس بعيداً عن الشمس.
@@ -56,13 +56,13 @@ function ShopPage() {
             key={p.id}
             className="group block"
           >
-            <div className="relative aspect-[4/5] overflow-hidden bg-secondary grain">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary grain">
               <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-              <div className="absolute top-4 start-4 font-mono text-[10px] uppercase tracking-widest text-brass">
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute top-4 start-4 font-mono text-[10px] uppercase tracking-widest text-brass-bright">
                 #{String(i + 1).padStart(2, "0")} · {p.roast}
               </div>
-              <div className="absolute bottom-4 end-4 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+              <div className="absolute bottom-4 end-4 font-mono text-[10px] uppercase tracking-widest text-cream/80">
                 {p.weight}
               </div>
             </div>
