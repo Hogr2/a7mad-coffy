@@ -32,7 +32,7 @@ export function SiteFooter() {
           <div className="font-mono text-[10px] text-brass mb-4">زرنا</div>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><MapPin className="w-3.5 h-3.5 mt-1 text-brass shrink-0" /> شارع المتنبي، بغداد</li>
-            <li className="flex items-start gap-2"><Phone className="w-3.5 h-3.5 mt-1 text-brass shrink-0" /><span dir="ltr">+964 770 000 0000</span></li>
+            <li className="flex items-start gap-2"><Phone className="w-3.5 h-3.5 mt-1 text-brass shrink-0" /><span dir="ltr">+964 777 449 2644</span></li>
             <li className="flex items-start gap-2"><Instagram className="w-3.5 h-3.5 mt-1 text-brass shrink-0" /> @aldawcoffee</li>
           </ul>
         </div>

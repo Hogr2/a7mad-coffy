@@ -1,5 +1,5 @@
-// ⚠️ بدّل هذا برقم واتساب استقبال الطلبات — صيغة دولية بدون + وبدون مسافات
-export const WHATSAPP_NUMBER = "9647700000000";
+// رقم واتساب استقبال الطلبات — صيغة دولية بدون + وبدون مسافات
+export const WHATSAPP_NUMBER = "9647774492644";
 
 export const SITE_URL = "https://a7mad-coffy1.vercel.app";
 

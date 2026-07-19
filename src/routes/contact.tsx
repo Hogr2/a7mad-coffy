@@ -34,7 +34,7 @@ function ContactPage() {
       <div className="mx-auto max-w-7xl px-6 sm:px-10 py-20 grid lg:grid-cols-12 gap-14">
         <aside className="lg:col-span-5 space-y-10">
           <Block icon={<MapPin className="w-4 h-4" />} label="العنوان" lines={["شارع المتنبي، بغداد", "مقابل مقهى الشابندر"]} />
-          <Block icon={<Phone className="w-4 h-4" />} label="الهاتف" lines={["+964 770 000 0000"]} dir="ltr" />
+          <Block icon={<Phone className="w-4 h-4" />} label="الهاتف" lines={["+964 777 449 2644"]} dir="ltr" />
           <Block icon={<Mail className="w-4 h-4" />} label="البريد" lines={["hello@aldaw.coffee"]} dir="ltr" />
           <Block icon={<Instagram className="w-4 h-4" />} label="إنستغرام" lines={["@aldawcoffee"]} dir="ltr" />
 
