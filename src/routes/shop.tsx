@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { products } from "@/lib/products";
+import { formatIQD, products } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 import bag from "@/assets/bag.jpg";
 
 export const Route = createFileRoute("/shop")({
@@ -8,7 +9,7 @@ export const Route = createFileRoute("/shop")({
     meta: [
       { title: "المتجر · الضوء" },
       { name: "description", content: "حبوب قهوة مختصة من إثيوبيا وكولومبيا وبنما، محمصة يدويا في بغداد. طلبك يخرج طازجا خلال ٤٨ ساعة." },
-      { property: "og:image", content: bag },
+      { property: "og:image", content: SITE_URL + bag },
     ],
   }),
   component: ShopPage,
@@ -73,7 +74,7 @@ function ShopPage() {
                 <div className="text-xs text-muted-foreground/80 mt-2 line-clamp-1">{p.notes.join(" · ")}</div>
               </div>
               <div className="text-end shrink-0">
-                <div className="font-display text-xl text-brass">{(p.price * 1000).toLocaleString("ar-EG")}</div>
+                <div className="font-display text-xl text-brass">{formatIQD(p.price)}</div>
                 <div className="font-mono text-[9px] uppercase text-muted-foreground">د.ع</div>
               </div>
             </div>

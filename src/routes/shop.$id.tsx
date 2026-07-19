@@ -1,7 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { Minus, Plus, ArrowLeft, Check } from "lucide-react";
-import { getProduct, products } from "@/lib/products";
+import { formatIQD, getProduct, products } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 import { useCart } from "@/lib/cart";
 
 export const Route = createFileRoute("/shop/$id")({
@@ -14,7 +15,7 @@ export const Route = createFileRoute("/shop/$id")({
     meta: [
       { title: `${loaderData?.name ?? "قهوة"} · متجر الضوء` },
       { name: "description", content: loaderData?.story ?? "قهوة مختصة من الضوء." },
-      { property: "og:image", content: loaderData?.image },
+      { property: "og:image", content: loaderData?.image ? SITE_URL + loaderData.image : undefined },
     ],
   }),
   notFoundComponent: () => (
@@ -108,7 +109,7 @@ function ProductPage() {
 
             <div className="flex items-end justify-between gap-6">
               <div>
-                <div className="font-display text-4xl text-brass">{(p.price * 1000 * qty).toLocaleString("ar-EG")}</div>
+                <div className="font-display text-4xl text-brass">{formatIQD(p.price, qty)}</div>
                 <div className="font-mono text-[10px] uppercase text-muted-foreground mt-1">دينار عراقي</div>
               </div>
               <div className="flex items-center border border-border rounded-sm">
@@ -124,7 +125,7 @@ function ProductPage() {
 
             <button
               onClick={() => {
-                add(p.id, qty);
+                add(p.id, qty, grind);
                 setAdded(true);
                 setTimeout(() => setAdded(false), 1600);
               }}

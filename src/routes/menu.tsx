@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { menu } from "@/lib/products";
+import { formatIQD, menu } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 import pour from "@/assets/pour.jpg";
 
 export const Route = createFileRoute("/menu")({
@@ -7,7 +8,7 @@ export const Route = createFileRoute("/menu")({
     meta: [
       { title: "المشرب · الضوء" },
       { name: "description", content: "قائمة مشروبات القهوة، طرق التحضير اليدوي، والمخبوزات اليومية في مقهى الضوء ببغداد." },
-      { property: "og:image", content: pour },
+      { property: "og:image", content: SITE_URL + pour },
     ],
   }),
   component: MenuPage,
@@ -26,7 +27,7 @@ function Section({ title, num, items }: { title: string; num: string; items: { n
             <div className="flex items-baseline gap-4">
               <span className="font-display text-xl text-foreground group-hover:text-brass transition-colors">{it.name}</span>
               <span className="flex-1 border-b border-dotted border-border mb-1.5" />
-              <span className="font-mono text-brass">{(it.price * 1000).toLocaleString("ar-EG")}</span>
+              <span className="font-mono text-brass">{formatIQD(it.price)}</span>
             </div>
             <div className="text-xs text-muted-foreground mt-1">{it.ar}</div>
           </li>

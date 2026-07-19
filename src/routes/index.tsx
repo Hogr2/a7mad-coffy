@@ -5,21 +5,23 @@ import beans from "@/assets/beans.jpg";
 import pour from "@/assets/pour.jpg";
 import cafe from "@/assets/cafe.jpg";
 import cherry from "@/assets/cherry.jpg";
-import bag from "@/assets/bag.jpg";
-import { products } from "@/lib/products";
+import { formatIQD, getProduct, products } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "الضوء · محمصة قهوة مختصة في بغداد" },
       { name: "description", content: "من مرتفعات إثيوبيا وكولومبيا إلى محمصتنا في بغداد. حبوب مختصة، تحميص يدوي، وفنجان بلا اختصار." },
-      { property: "og:image", content: heroSteam },
+      { property: "og:image", content: SITE_URL + heroSteam },
     ],
   }),
   component: Home,
 });
 
 function Home() {
+  const featured = getProduct("sidra")!;
+  const noteRoles = ["علوي", "أوسط", "نهاية"];
   return (
     <>
       {/* HERO ─ full-bleed cinematic still with steam and brass copy */}
@@ -117,35 +119,32 @@ function Home() {
       <section className="relative bg-secondary/30 border-y border-border/60 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 py-24 grid md:grid-cols-12 gap-10 items-center">
           <div className="md:col-span-7 relative aspect-[4/5] md:aspect-[5/6] overflow-hidden">
-            <img src={bag} alt="حقيبة قهوة الضوء" loading="lazy" className="h-full w-full object-cover" />
+            <img src={featured.image} alt={`حقيبة قهوة ${featured.name}`} loading="lazy" className="h-full w-full object-cover" />
             <div className="absolute inset-0 vignette" />
             <div className="absolute top-6 start-6 font-mono text-[10px] uppercase tracking-[0.3em] text-brass-bright">Reel 03 · Featured</div>
           </div>
           <div className="md:col-span-5">
             <div className="font-mono text-[11px] text-brass mb-4">حبة الشهر</div>
-            <h2 className="font-display text-5xl sm:text-6xl leading-none">سدرة</h2>
-            <div className="mt-3 text-muted-foreground">كولومبيا · هويلا · تخمير لاهوائي</div>
+            <h2 className="font-display text-5xl sm:text-6xl leading-none">{featured.name}</h2>
+            <div className="mt-3 text-muted-foreground">{featured.origin} · {featured.process}</div>
             <div className="hairline my-8" />
-            <p className="text-foreground/80 leading-relaxed">
-              دفعة محدودة من مزرعة إل بارايسو. أربعة أيام من التخمير اللاهوائي
-              أعطتها فراولة ناضجة وكاكاو دافئ. نحمصها متوسطة لتبقى الحلاوة على السطح.
-            </p>
+            <p className="text-foreground/80 leading-relaxed">{featured.story}</p>
             <ul className="mt-8 grid grid-cols-3 gap-4 text-center">
-              {[["ياسمين", "علوي"], ["فراولة", "أوسط"], ["كاكاو", "نهاية"]].map(([n, r]) => (
+              {featured.notes.map((n, i) => (
                 <li key={n} className="border border-border rounded-sm p-3">
                   <div className="font-display text-lg">{n}</div>
-                  <div className="font-mono text-[10px] uppercase text-muted-foreground mt-1">{r}</div>
+                  <div className="font-mono text-[10px] uppercase text-muted-foreground mt-1">{noteRoles[i] ?? ""}</div>
                 </li>
               ))}
             </ul>
             <div className="mt-10 flex items-center gap-6">
               <div>
-                <div className="font-display text-3xl text-brass">٢٦٬٠٠٠ <span className="text-sm text-muted-foreground">د.ع</span></div>
-                <div className="font-mono text-[10px] text-muted-foreground uppercase">٢٥٠ غرام</div>
+                <div className="font-display text-3xl text-brass">{formatIQD(featured.price)} <span className="text-sm text-muted-foreground">د.ع</span></div>
+                <div className="font-mono text-[10px] text-muted-foreground uppercase">{featured.weight}</div>
               </div>
               <Link
                 to="/shop/$id"
-                params={{ id: "sidra" }}
+                params={{ id: featured.id }}
                 className="ms-auto inline-flex items-center gap-2 rounded-sm bg-brass px-6 py-3 text-sm text-primary-foreground hover:bg-brass-soft transition"
               >
                 اقرأ القصة
@@ -185,7 +184,7 @@ function Home() {
                   <div className="text-xs text-muted-foreground mt-1">{p.origin}</div>
                 </div>
                 <div className="text-end shrink-0">
-                  <div className="font-display text-lg text-brass">{(p.price * 1000).toLocaleString("ar-EG")}</div>
+                  <div className="font-display text-lg text-brass">{formatIQD(p.price)}</div>
                   <div className="font-mono text-[9px] uppercase text-muted-foreground">د.ع</div>
                 </div>
               </div>

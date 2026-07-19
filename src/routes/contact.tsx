@@ -2,13 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { MapPin, Phone, Instagram, Mail, Check } from "lucide-react";
 import cafe from "@/assets/cafe.jpg";
+import { openWhatsApp, SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "تواصل · الضوء" },
       { name: "description", content: "زرنا في شارع المتنبي ببغداد، أو راسلنا بشأن الجملة، التدريب، أو مناسبات القهوة." },
-      { property: "og:image", content: cafe },
+      { property: "og:image", content: SITE_URL + cafe },
     ],
   }),
   component: ContactPage,
@@ -50,12 +51,18 @@ function ContactPage() {
           {sent ? (
             <div className="border border-brass/40 rounded-sm p-10 text-center">
               <div className="w-12 h-12 rounded-full border border-brass flex items-center justify-center mx-auto text-brass"><Check className="w-5 h-5" /></div>
-              <h2 className="mt-6 font-display text-3xl">وصلت رسالتك</h2>
-              <p className="mt-3 text-muted-foreground">نرد خلال يوم عمل واحد.</p>
+              <h2 className="mt-6 font-display text-3xl">فتحنا لك واتساب</h2>
+              <p className="mt-3 text-muted-foreground">اضغط إرسال بالواتساب حتى توصلنا رسالتك. نرد خلال يوم عمل واحد.</p>
             </div>
           ) : (
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={(e) => {
+                e.preventDefault();
+                openWhatsApp(
+                  ["رسالة من موقع الضوء 📮", "", `الموضوع: ${form.subject}`, `الاسم: ${form.name}`, `البريد: ${form.email}`, "", form.message].join("\n"),
+                );
+                setSent(true);
+              }}
               className="border border-border rounded-sm p-8 sm:p-10 bg-card grain space-y-5"
             >
               <h2 className="font-display text-3xl mb-2">اكتب لنا</h2>

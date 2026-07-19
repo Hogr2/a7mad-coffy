@@ -100,6 +100,10 @@ export const products: Product[] = [
 
 export const getProduct = (id: string) => products.find((p) => p.id === id);
 
+// prices are stored in thousands of IQD (22 => 22,000 د.ع)
+export const priceIQD = (price: number, qty = 1) => price * 1000 * qty;
+export const formatIQD = (price: number, qty = 1) => priceIQD(price, qty).toLocaleString("ar-EG");
+
 export const menu = {
   espresso: [
     { name: "إسبريسو", ar: "جرعة مركزة", price: 3 },
